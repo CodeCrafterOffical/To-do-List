@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background: #141523;
+    --secondary-color: #4a4d57;
+    --accent-color: #19d28f;
+    --text-color: #f9f9f9;
+}
+
+.container{
+    background-color: var(--background);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/*########## CHECKBOX STYLE ########## */
+
+.todo-item{
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #f9f9f9;
+
+}
+
+.todo-text{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.custom-checkbox{
+    border: 2px solid #29F3E2;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 200ms ease;
+    margin: 0 10px;
+}
+input:checked ~ .custom-checkbox{
+    background-color: #29F3E2;
+}
+input:checked ~ .custom-checkbox svg{
+    fill: #fff;
+}
+input:checked ~ .todo-text{
+    text-decoration: line-through;
+    color:#4a4d57;
+}
+
+input{
+    display: none;
+}
